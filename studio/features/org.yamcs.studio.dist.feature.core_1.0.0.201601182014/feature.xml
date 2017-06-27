@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.yamcs.studio.dist.feature.core"
+      label="Yamcs Studio Components"
+      version="1.0.0.201601182014"
+      provider-name="Space Applications Services"
+      plugin="org.yamcs.studio.dist.default.plugin">
+
+   <copyright>
+      Copyright (c) 2015 Space Applications Services
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      You must accept this license agreement in order to install and
+use this
+software.
+THIS SOFTWARE IS PROVIDED UNDER THIS LICENSE ON AN &quot;../AS IS&quot;
+BASIS.
+WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+For details, see http://www.eclipse.org/legal/epl-v10.html
+   </license>
+
+   <plugin
+         id="org.yamcs.studio.core"
+         download-size="104"
+         install-size="213"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ycl.dsl"
+         download-size="64"
+         install-size="134"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ycl.ui"
+         download-size="35"
+         install-size="97"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.osgiclient"
+         download-size="7949"
+         install-size="18079"
+         version="1.0.0.20160118201226"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.script"
+         download-size="4"
+         install-size="6"
+         version="1.0.0.201601182014"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ui.commanding"
+         download-size="177"
+         install-size="347"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ui.archive"
+         download-size="135"
+         install-size="258"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ui.monitoring"
+         download-size="25"
+         install-size="48"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ui.eventlog"
+         download-size="37"
+         install-size="67"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.core.ui"
+         download-size="116"
+         install-size="164"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ui.processor"
+         download-size="34"
+         install-size="71"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.ui.css"
+         download-size="22"
+         install-size="41"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.dist.default.plugin"
+         download-size="984"
+         install-size="2991"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.theming"
+         download-size="18"
+         install-size="33"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+</feature>

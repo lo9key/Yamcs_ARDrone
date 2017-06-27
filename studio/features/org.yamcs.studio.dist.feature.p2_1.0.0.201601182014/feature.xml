@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.yamcs.studio.dist.feature.p2"
+      label="Yamcs P2 Update Components"
+      version="1.0.0.201601182014"
+      provider-name="Space Applications Services">
+
+   <plugin
+         id="org.eclipse.equinox.p2.ui"
+         download-size="555"
+         install-size="1149"
+         version="2.3.0.v20140404-1657"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.operations"
+         download-size="73"
+         install-size="171"
+         version="2.4.0.v20131119-0908"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.director"
+         download-size="100"
+         install-size="230"
+         version="2.3.100.v20140224-1921"
+         unpack="false"/>
+
+   <plugin
+         id="org.sat4j.core"
+         download-size="355"
+         install-size="684"
+         version="2.3.5.v201308161310"
+         unpack="false"/>
+
+   <plugin
+         id="org.sat4j.pb"
+         download-size="236"
+         install-size="492"
+         version="2.3.5.v201404071733"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.artifact.repository"
+         download-size="132"
+         install-size="290"
+         version="1.1.300.v20131211-1531"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.p2.jarprocessor"
+         download-size="66"
+         install-size="118"
+         version="1.0.300.v20131211-1531"
+         unpack="false"/>
+
+   <plugin
+         id="org.yamcs.studio.p2"
+         download-size="7"
+         install-size="11"
+         version="1.0.0.201601182014"
+         unpack="false"/>
+
+</feature>

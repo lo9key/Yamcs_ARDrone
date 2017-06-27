@@ -1,0 +1,14 @@
+#configuration for the TcpTmProvider and TcpUplinker 
+# they look for properties like 
+#spec:
+#    tmHost: 
+#    tmPort:
+#    tcHost:
+#    tcPort:
+
+local:
+    tmHost: 0.0.0.0
+    tmPort: 5011
+    tcHost: 192.168.1.1
+    tcPort: 5010
+    timestampFormat: CFE_SB_TIME_32_16_SUBS 

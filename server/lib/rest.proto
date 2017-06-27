@@ -1,0 +1,200 @@
+package parameters;
+option java_package = "org.yamcs.protobuf";
+
+import "yamcs.proto";
+import "archive.proto";
+import "pvalue.proto";
+import "mdb.proto";
+import "alarms.proto";
+import "commanding.proto";
+import "yamcsManagement.proto";
+
+message GetApiOverviewResponse {
+  repeated string url = 1;
+}
+
+message ListParameterInfoResponse {
+  repeated mdb.ParameterInfo parameter = 1;
+}
+
+message BulkGetParameterInfoRequest {
+  repeated yamcs.NamedObjectId id = 1;
+}
+
+message BulkGetParameterInfoResponse {
+  message GetParameterInfoResponse {
+    optional yamcs.NamedObjectId id = 1;
+    optional mdb.ParameterInfo parameter = 2;
+  }
+  repeated GetParameterInfoResponse response = 1;
+}
+
+message BulkGetParameterValueRequest {
+  repeated yamcs.NamedObjectId id = 1;
+  optional bool fromCache = 2;
+  optional uint64 timeout = 3; //if not fromCache, wait this time (in milliseconds) to receive the parameter
+}
+
+message BulkGetParameterValueResponse {
+  repeated pvalue.ParameterValue value = 1;
+}
+
+message BulkSetParameterValueRequest {
+  message SetParameterValueRequest {
+    optional yamcs.NamedObjectId id = 1;
+    optional yamcs.Value value = 2;
+  }
+  repeated SetParameterValueRequest request = 1;
+}
+
+message ListContainerInfoResponse {
+  repeated mdb.ContainerInfo container = 1;
+}
+
+message ListCommandInfoResponse {
+  repeated mdb.CommandInfo command = 1;
+}
+
+message ListAlgorithmInfoResponse {
+  repeated mdb.AlgorithmInfo algorithm = 1;
+}
+
+message ListLinkInfoResponse {
+  repeated yamcsManagement.LinkInfo link = 1;
+}
+
+message ListCommandsResponse {
+  repeated commanding.CommandHistoryEntry entry = 1;
+}
+
+message EditLinkRequest {
+  optional string state = 1;
+}
+
+message EditCommandQueueRequest {
+  optional string state = 1;
+}
+
+message ListClientsResponse {
+  repeated yamcsManagement.ClientInfo client = 1;
+}
+
+message EditClientRequest {
+  optional string processor = 1;
+}
+
+message ListProcessorsResponse {
+  repeated yamcsManagement.ProcessorInfo processor = 1;
+}
+
+message ListCommandQueuesResponse {
+  repeated commanding.CommandQueueInfo queue = 1;
+}
+
+message ListCommandQueueEntries {
+  repeated commanding.CommandQueueEntry entry = 1;
+}
+
+message EditCommandQueueEntryRequest {
+  optional string state = 1;
+}
+
+message IssueCommandRequest {
+  message Assignment {
+    optional string name = 1;
+    optional string value = 2;
+  }
+  repeated Assignment assignment = 1;
+  optional string origin = 2;
+  optional int32 sequenceNumber = 3;
+  optional bool dryRun = 4;
+}
+
+message IssueCommandResponse {
+  optional string queue = 1;
+  optional string source = 2;
+  optional string hex = 3;
+  optional bytes binary = 4;
+}
+
+message CreateProcessorRequest {
+  optional string name = 1;
+  optional string start = 2;
+  optional string stop = 3;
+  optional bool loop = 4;
+  optional string speed = 5;
+  repeated int32 clientId = 6;
+  repeated string paraname = 7;
+  repeated string ppgroup = 8;
+  repeated string packetname = 9;
+  optional bool cmdhist = 10;
+  optional bool persistent = 11;
+}
+
+message EditProcessorRequest {
+  optional string state = 1;
+  optional string seek = 2;
+  optional string speed = 3;
+}
+
+message StreamSubscribeRequest {
+  optional string stream = 1;
+  //repeated ColumnValue limit = 2; // Multiple limits are AND-ed together
+}
+
+message SetSimulationTimeRequest {
+  //one of the two have to be specified
+  optional int64 time0 = 1;
+  optional string time0UTC = 2;
+  optional int64 simElapsedTime = 3;
+  optional double simSpeed = 4;
+}
+
+message ListInstancesResponse {
+  repeated yamcsManagement.YamcsInstance instance = 1;
+}
+
+message ListTagsResponse {
+  repeated yamcs.ArchiveTag tag = 1;
+}
+
+message CreateTagRequest {
+  optional string name = 1;
+  optional string start = 2;
+  optional string stop = 3;
+  optional string description = 4;
+  optional string color = 5;
+}
+
+message EditTagRequest {
+  optional string name = 1;
+  optional string start = 2;
+  optional string stop = 3;
+  optional string description = 4;
+  optional string color = 5;
+}
+
+message ListAlarmsResponse {
+  repeated alarms.AlarmData alarm = 1;
+}
+
+message EditAlarmRequest {
+  optional string state = 1;
+  optional string comment = 2;
+}
+
+message ListTablesResponse {
+  repeated archive.TableInfo table = 1;
+}
+
+message ListStreamsResponse {
+  repeated archive.StreamInfo stream = 1;
+}
+
+message ListEventsResponse {
+  repeated yamcs.Event event = 1;
+}
+
+message ListPacketsResponse {
+  repeated yamcs.TmPacketData packet = 1;
+}
